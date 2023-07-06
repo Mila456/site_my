@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кубики</title>
+</head>
+
+<body>
+    <div class="big-reactangle">
+        <!-- 1 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- 2 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- 3 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- 4 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- 5 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- 6 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- 7 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- 8 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- 9 кубик -->
+        <div class="small-reactangle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <style>
+        /*стили*/
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .big-reactangle {
+            width: 1000px;
+            height: 1000px;
+            border: 3px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            /*перенос на след строку*/
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .small-reactangle {
+            width: 30%;
+            height: 30%;
+            background-color: aliceblue;
+            border: 10px solid red;
+
+            display: flex;
+        }
+
+        /*Кубики*/
+        .small-reactangle:nth-child(2) {
+            justify-content: space-between;
+        }
+
+        .small-reactangle:nth-child(3) {
+            flex-direction: column;
+        }
+
+        .small-reactangle:nth-child(4) {
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .small-reactangle:nth-child(5) {
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .small-reactangle:nth-child(6) {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /*flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;*/
+        }
+
+        .small-reactangle:nth-child(6) .circle:nth-child(2) {
+            flex-direction: column;
+            justify-self: space-around;
+            align-self: flex-end;
+
+        }
+
+        .small-reactangle:nth-child(7) {
+            flex-wrap: wrap;
+            align-content: space-between;
+
+        }
+
+        .small-reactangle:nth-child(7) circle:nth-child(5) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .small-reactangle:nth-child(8) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .small-reactangle:nth-child(9) {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .small-reactangle:nth-child(9) circle:nth-child(1) {
+            flex: content;
+
+        }
+
+        /* шарики на Кубиках*/
+        .circle {
+            width: 27%;
+            height: 27%;
+            background-color: rgb(255, 238, 0);
+            border-radius: 50%;
+        }
+    </style>
+</body>
+
+</html>

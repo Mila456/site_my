@@ -415,9 +415,9 @@ header .container {
     }
 }
 
-/*Картиноки*/
+/*Картиноки в слайдаре*/
 .section-slider .hider .image:nth-child(1) {
-    background-image: url(https://mobimg.b-cdn.net/v3/fetch/73/73dc8e05bec81f96e26162f5b87d13fa.jpeg);
+    background-image: url(./Images/priroda.jpg);
     border-radius: 5px 0 0 5px;
 }
 
@@ -510,8 +510,7 @@ header .container {
     margin-top: 2px;
     font-weight: 500;
     color: white;
-    padding-bottom: 10px;
-    /* внутрен. нижний отступ*/
+    padding-bottom: 10px; /* внутрен. нижний отступ*/
 }
 
 .section-employes .txt .line {
@@ -1153,8 +1152,6 @@ footer .column1 form button {
     color: white;
 }
 
-
-
 footer  .column2 h2, 
 footer  .column3 h2{
     color: #444;
@@ -1208,4 +1205,19 @@ footer .column3 a{
 }
 footer{
     padding-bottom: 20px;
+}
+
+#to-top,#to-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1fd2b1;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #1fd2b1;
+}
+
+#to-top{
+    z-index: 2;
 }

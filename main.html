@@ -15,6 +15,7 @@
 <body>
 
   <header>
+    <div id="top"></div>
     <div class="container">
       <div class="logo">
         <img
@@ -23,10 +24,10 @@
       </div>
       <nav>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contacts</a></li>
-          <li><a href="">Works</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#works">Works</a></li>
         </ul>
       </nav>
     </div>
@@ -35,31 +36,32 @@
   <main>
     <section class="section-welcome">
       <div class="container">
+        <div id="home"></div>
         <h1>Welcome to the site</h1>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quaerat corrupti temporibus modi consequuntur
           aliquid harum nam. Error voluptatem iure odit facere facilis dolor! Ipsa impedit nisi maxime distinctio
           culpa.</h2>
         <div class="row">
           <div class="item">
-            <a href="">
+            <a href="#home">
               <span class="line"></span>
               <h3>Home</h3>
             </a>
           </div>
           <div class="item">
-            <a href="">
+            <a href="#about">
               <span class="line"></span>
               <h3>About</h3>
             </a>
           </div>
           <div class="item">
-            <a href="">
+            <a href="#contacts">
               <span class="line"></span>
               <h3>Contacts</h3>
             </a>
           </div>
           <div class="item">
-            <a href="">
+            <a href="#works">
               <span class="line"></span>
               <h3>Works</h3>
             </a>
@@ -69,6 +71,7 @@
 
     <!-- Секция о нас -->
     <section class=" section-about">
+      <div id="about"></div>
       <div class="container">
         <div class="txt-description">
           <h3 class="script">What we do</h3>
@@ -252,6 +255,7 @@
 
     <!--Cекция работники -->
     <section class="section-employes">
+     <div id="contacts"></div>
       <div class="container">
         <div class="txt-description">
           <h3 class="script">What we do</h3>
@@ -404,8 +408,9 @@
       </div>
     </section>
 
-    <!-- Секция разделов с фото section-grid-->
+    <!-- Секция разделов с фото работами section-grid-->
     <section class="section-grid">
+      <div id="works"></div>
       <div class="container">
         <div class="item">
           <div class="foreground">
@@ -695,9 +700,39 @@
         <a href="">View more photos</a>
       </div>
     </div>
+    <div id="button"></div>
+
   </footer>
 
+  <a href="#top" id="to-top">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+
+  <a href="#button" id="to-button">
+    <i class="fa fa-chevron-down"></i>
+  </a>
+
   <!-- <div class="test test2"></div>-->
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script> 
+    <script> 
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { 
+            anchor.addEventListener('click', function (e) { 
+                e.preventDefault(); 
+ 
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ 
+                    behavior: 'smooth' 
+                }); 
+            }); 
+        }); 
+ 
+        $(window).scroll(function (e) { 
+            if ($(this).scrollTop() > 1000) { 
+                $("#to-top").css("display", "block"); 
+            } else { 
+                $("#to-top").css("display", "none"); 
+            } 
+        }); 
+    </script>
 </body>
 
 </html>
